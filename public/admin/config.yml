@@ -1,1 +1,23 @@
 
+backend:
+  name: github
+  repo: your-github-username/fupre-it-blog # Change this to your repository path
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "IT Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Course Code", name: "course_code", widget: "select", options: ["COS 201", "IFT 203", "IFT 205", "FUPRE-IFT 211"] }
+      - { label: "Author Name", name: "author", widget: "string", default: "IREYEFOJU Ayomide Jeffery" }
+      - { label: "Category", name: "category", widget: "select", options: ["Software Engineering", "Web & Systems", "Security & Hardware"] }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body / Tutorial Content", name: "body", widget: "markdown" }
