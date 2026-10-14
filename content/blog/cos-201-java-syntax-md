@@ -1,0 +1,48 @@
+---
+title: "COS 201: Master Java Syntax, Variables, and Your First Program"
+date: 2026-10-14
+course_code: "COS 201"
+semester: "2025/2026-1st"
+author: "IREYEFOJU Ayomide Jeffery"
+category: "Software Engineering"
+tags: ["Java", "Programming I", "FUPRE 200L"]
+summary: "An introductory guide to setting up Java, understanding static typing, and compiling your very first Object-Oriented script at FUPRE."
+---
+
+Welcome to **COS 201: Computer Programming I**! As IT students at FUPRE, Java introduces us to compile-time safety and strict Object-Oriented Programming (OOP) concepts. Let's break down the essential structure of a Java file.
+
+## The Anatomy of a Java Program
+
+Every piece of executing code in Java must live inside a **class**. The name of the public class **must match the file name** exactly. For example, the code below must be saved as `HelloWorld.java`.
+
+### Code Example: Hello FUPRE IT
+```java
+// HelloWorld.java
+public class HelloWorld {
+    // The main method is the entry point of any Java application
+    public static void main(String[] args) {
+        System.out.println("Hello, FUPRE IT Students!");
+        
+        // Example of strongly-typed variable declaration
+        int levels = 200;
+        System.out.println("Current Study Level: " + levels + "L");
+    }
+}
+```
+
+## Quick Compilation Cheatsheet
+Since Java is a compiled language, you cannot run the source `.java` file directly. You must compile it to bytecode using the CLI:
+
+1. **Compile the file** (generates a `HelloWorld.class` file):
+   ```bash
+   javac HelloWorld.java
+   ```
+2. **Execute the bytecode** (run without the extension):
+   ```bash
+   java HelloWorld
+   ```
+
+## Key Things to Remember for Practicals:
+* **Case Sensitivity:** `Main` is not the same as `main`. 
+* **Semicolons:** Missing a `;` at the end of a statement will throw a compile-time error.
+* **Data Types:** You must declare the variable type explicitly (e.g., `int`, `String`, `double`).
